@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Hexo</title>
+    <title>javaScript学习笔记 | Hexo</title>
     <meta name="author" content="John Doe" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -42,7 +42,9 @@
 
 
 
-<script src="/js/lib/home.js"></script>
+
+
+
 
 <link rel="stylesheet" href="/css/main.css" />
 
@@ -152,40 +154,11 @@
 </transition>
 
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
-            <div id="home-head">
-    <div
-        id="home-background"
-        ref="homeBackground"
-        data-images="/images/background.jpg"
-    ></div>
-    <div id="home-info" @click="homeClick">
-        <span class="loop"></span>
-        <span class="loop"></span>
-        <span class="loop"></span>
-        <span class="loop"></span>
-        <span class="info">
-            <div class="wrap">
-                <h1>Hexo</h1>
-                <h3></h3>
-                <h5></h5>
-            </div>
-        </span>
+            <div class="article">
+    <div>
+        <h1>javaScript学习笔记</h1>
     </div>
-</div>
-<div
-    id="home-posts-wrap"
-    ref="homePostsWrap"
-    true
->
-    <div id="home-posts">
-        
-
-<div class="post">
-    <a href="/2024/06/04/javaScript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
-        <h2 class="post-title">javaScript学习笔记</h2>
-    </a>
-    <div class="category-and-date">
-        
+    <div class="info">
         <span class="date">
             <span class="icon">
                 <i class="fa-solid fa-calendar fa-fw"></i>
@@ -195,10 +168,9 @@
         
         
     </div>
-    <div class="description">
-        <div class="content" v-pre>
-            
-            <h2 id="日期对象"><a href="#日期对象" class="headerlink" title="日期对象"></a>日期对象</h2><p>ECMAScript 中内置了获取系统时间的对象 Date，使用 Date 时与之前学习的内置对象 console 和 Math 不同，它需要借助 new 关键字才能使用。</p>
+    
+    <div class="content" v-pre>
+        <h2 id="日期对象"><a href="#日期对象" class="headerlink" title="日期对象"></a>日期对象</h2><p>ECMAScript 中内置了获取系统时间的对象 Date，使用 Date 时与之前学习的内置对象 console 和 Math 不同，它需要借助 new 关键字才能使用。</p>
 <h3 id="实例化"><a href="#实例化" class="headerlink" title="实例化"></a>实例化</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1. 实例化</span></span><br><span class="line"><span class="comment">// const date = new Date(); // 系统默认时间</span></span><br><span class="line"><span class="keyword">const</span> date = <span class="keyword">new</span> <span class="title class_">Date</span>(<span class="string">&#x27;2020-05-01&#x27;</span>) <span class="comment">// 指定时间</span></span><br><span class="line"><span class="comment">// date 变量即所谓的时间对象</span></span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">typeof</span> date)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3> <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">// 1. 实例化</span></span><br><span class="line"><span class="keyword">const</span> date = <span class="keyword">new</span> <span class="title class_">Date</span>();</span><br><span class="line"><span class="comment">// 2. 调用时间对象方法</span></span><br><span class="line"><span class="comment">// 通过方法分别获取年、月、日，时、分、秒</span></span><br><span class="line"><span class="keyword">const</span> year = date.<span class="title function_">getFullYear</span>(); <span class="comment">// 四位年份</span></span><br><span class="line"><span class="keyword">const</span> month = date.<span class="title function_">getMonth</span>(); <span class="comment">// 0 ~ 11</span></span><br></pre></td></tr></table></figure>
@@ -1003,128 +975,13 @@
 <h3 id="8-页面渲染及筛选"><a href="#8-页面渲染及筛选" class="headerlink" title="8.页面渲染及筛选"></a>8.页面渲染及筛选</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br></pre></td><td class="code"><pre><span class="line">&lt;!<span class="variable constant_">DOCTYPE</span> html&gt;</span><br><span class="line">&lt;html lang = &quot;en&quot;&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;head&gt;</span><br><span class="line">        &lt;meta charset = &quot;UTF-8&quot;&gt;</span><br><span class="line">        &lt;meta http-equiv = &quot;X-UA-Compatible&quot; content = &quot;IE=edge&quot;&gt;</span><br><span class="line">        &lt;meta name = &quot;viewport&quot; content = &quot;width=device-width, initial-scale=1.0&quot;&gt;</span><br><span class="line">        &lt;title&gt;商品渲染&lt;/title&gt;</span><br><span class="line">        &lt;style&gt;</span><br><span class="line">            * &#123;</span><br><span class="line">                margin: 0;</span><br><span class="line">                padding: 0;</span><br><span class="line">                box-sizing: border-box;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            .list &#123;</span><br><span class="line">                width: 990px;</span><br><span class="line">                margin: 0 auto;</span><br><span class="line">                display: flex;</span><br><span class="line">                flex-wrap: wrap;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            .item &#123;</span><br><span class="line">                width: 240px;</span><br><span class="line">                margin-left: 10px;</span><br><span class="line">                padding: 20px 30px;</span><br><span class="line">                transition: all .5s;</span><br><span class="line">                margin-bottom: 20px;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            .item:nth-child(4n) &#123;</span><br><span class="line">                margin-left: 0;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            .item:hover &#123;</span><br><span class="line">                box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);</span><br><span class="line">                transform: translate3d(0, -4px, 0);</span><br><span class="line">                cursor: pointer;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            .item img &#123;</span><br><span class="line">                width: 100%;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            .item .name &#123;</span><br><span class="line">                font-size: 18px;</span><br><span class="line">                margin-bottom: 10px;</span><br><span class="line">                color: #666;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            .item .price &#123;</span><br><span class="line">                font-size: 22px;</span><br><span class="line">                color: firebrick;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            .item .price::before &#123;</span><br><span class="line">                content: &quot;¥&quot;;</span><br><span class="line">                font-size: 14px;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            .filter &#123;</span><br><span class="line">                display: flex;</span><br><span class="line">                width: 990px;</span><br><span class="line">                margin: 0 auto;</span><br><span class="line">                padding: 50px 30px;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            .filter a &#123;</span><br><span class="line">                padding: 10px 20px;</span><br><span class="line">                background: #f5f5f5;</span><br><span class="line">                color: #666;</span><br><span class="line">                text-decoration: none;</span><br><span class="line">                margin-right: 20px;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            .filter a:active,</span><br><span class="line">            .filter a:focus &#123;</span><br><span class="line">                background: #05943c;</span><br><span class="line">                color: #fff;</span><br><span class="line">            &#125;</span><br><span class="line">        &lt;/style&gt;</span><br><span class="line">    &lt;/head&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        &lt;div class = &quot;filter&quot;&gt;</span><br><span class="line">            &lt;a data-index = &quot;1&quot; href = &quot;javascript:&quot;&gt;0-100元&lt;/a&gt;</span><br><span class="line">            &lt;a data-index = &quot;2&quot; href = &quot;javascript:&quot;&gt;100-300元&lt;/a&gt;</span><br><span class="line">            &lt;a data-index = &quot;3&quot; href = &quot;javascript:&quot;&gt;300元以上&lt;/a&gt;</span><br><span class="line">            &lt;a href = &quot;javascript:&quot;&gt;全部区间&lt;/a&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;div class = &quot;list&quot;&gt;</span><br><span class="line">            &lt;!-- &lt;div class=&quot;item&quot;&gt;</span><br><span class="line">              &lt;img src=&quot;&quot; alt=&quot;&quot;&gt;</span><br><span class="line">              &lt;p class=&quot;name&quot;&gt;&lt;/p&gt;</span><br><span class="line">              &lt;p class=&quot;price&quot;&gt;&lt;/p&gt;</span><br><span class="line">            &lt;/div&gt; --&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;script&gt;</span><br><span class="line">          // 2. 初始化数据</span><br><span class="line">          const goodsList = [</span><br><span class="line">            &#123;</span><br><span class="line">              id: &#x27;4001172&#x27; ,</span><br><span class="line">              name: &#x27;称心如意手摇咖啡磨豆机咖啡豆研磨机&#x27; ,</span><br><span class="line">              price: &#x27;289.00&#x27; ,</span><br><span class="line">              picture: &#x27;https://yanxuan-item.nosdn.127.net/84a59ff9c58a77032564e61f716846d6.jpg&#x27; ,</span><br><span class="line">            &#125; ,</span><br><span class="line">            &#123;</span><br><span class="line">              id: &#x27;4001594&#x27; ,</span><br><span class="line">              name: &#x27;日式黑陶功夫茶组双侧把茶具礼盒装&#x27; ,</span><br><span class="line">              price: &#x27;288.00&#x27; ,</span><br><span class="line">              picture: &#x27;https://yanxuan-item.nosdn.127.net/3346b7b92f9563c7a7e24c7ead883f18.jpg&#x27; ,</span><br><span class="line">            &#125; ,</span><br><span class="line">            &#123;</span><br><span class="line">              id: &#x27;4001009&#x27; ,</span><br><span class="line">              name: &#x27;竹制干泡茶盘正方形沥水茶台品茶盘&#x27; ,</span><br><span class="line">              price: &#x27;109.00&#x27; ,</span><br><span class="line">              picture: &#x27;https://yanxuan-item.nosdn.127.net/2d942d6bc94f1e230763e1a5a3b379e1.png&#x27; ,</span><br><span class="line">            &#125; ,</span><br><span class="line">            &#123;</span><br><span class="line">              id: &#x27;4001874&#x27; ,</span><br><span class="line">              name: &#x27;古法温酒汝瓷酒具套装白酒杯莲花温酒器&#x27; ,</span><br><span class="line">              price: &#x27;488.00&#x27; ,</span><br><span class="line">              picture: &#x27;https://yanxuan-item.nosdn.127.net/44e51622800e4fceb6bee8e616da85fd.png&#x27; ,</span><br><span class="line">            &#125; ,</span><br><span class="line">            &#123;</span><br><span class="line">              id: &#x27;4001649&#x27; ,</span><br><span class="line">              name: &#x27;大师监制龙泉青瓷茶叶罐&#x27; ,</span><br><span class="line">              price: &#x27;139.00&#x27; ,</span><br><span class="line">              picture: &#x27;https://yanxuan-item.nosdn.127.net/4356c9fc150753775fe56b465314f1eb.png&#x27; ,</span><br><span class="line">            &#125; ,</span><br><span class="line">            &#123;</span><br><span class="line">              id: &#x27;3997185&#x27; ,</span><br><span class="line">              name: &#x27;与众不同的口感汝瓷白酒杯套组1壶4杯&#x27; ,</span><br><span class="line">              price: &#x27;108.00&#x27; ,</span><br><span class="line">              picture: &#x27;https://yanxuan-item.nosdn.127.net/8e21c794dfd3a4e8573273ddae50bce2.jpg&#x27; ,</span><br><span class="line">            &#125; ,</span><br><span class="line">            &#123;</span><br><span class="line">              id: &#x27;3997403&#x27; ,</span><br><span class="line">              name: &#x27;手工吹制更厚实白酒杯壶套装6壶6杯&#x27; ,</span><br><span class="line">              price: &#x27;99.00&#x27; ,</span><br><span class="line">              picture: &#x27;https://yanxuan-item.nosdn.127.net/af2371a65f60bce152a61fc22745ff3f.jpg&#x27; ,</span><br><span class="line">            &#125; ,</span><br><span class="line">            &#123;</span><br><span class="line">              id: &#x27;3998274&#x27; ,</span><br><span class="line">              name: &#x27;德国百年工艺高端水晶玻璃红酒杯2支装&#x27; ,</span><br><span class="line">              price: &#x27;139.00&#x27; ,</span><br><span class="line">              picture: &#x27;https://yanxuan-item.nosdn.127.net/8896b897b3ec6639bbd1134d66b9715c.jpg&#x27; ,</span><br><span class="line">            &#125; ,</span><br><span class="line">          ]</span><br><span class="line">          </span><br><span class="line">          </span><br><span class="line">          function render (arr) &#123;</span><br><span class="line">            let str = &#x27;&#x27;</span><br><span class="line">            arr.forEach (item =&gt; &#123;</span><br><span class="line">              const &#123;name , price , picture&#125; = item</span><br><span class="line">              str += `</span><br><span class="line">                    &lt;div class=&quot;item&quot;&gt;</span><br><span class="line">                      &lt;img src=&quot;$&#123;picture&#125;&quot; alt=&quot;&quot;&gt;</span><br><span class="line">                      &lt;p class=&quot;name&quot;&gt;$&#123;name&#125;&lt;/p&gt;</span><br><span class="line">                      &lt;p class=&quot;price&quot;&gt;$&#123;price&#125;&lt;/p&gt;</span><br><span class="line">                    &lt;/div&gt;</span><br><span class="line">                    `</span><br><span class="line">            &#125;)</span><br><span class="line">            document.querySelector (&#x27;.list&#x27;).innerHTML = str</span><br><span class="line">          &#125;</span><br><span class="line">          </span><br><span class="line">          render (goodsList);</span><br><span class="line">          document.querySelector (&#x27;.filter&#x27;).addEventListener (&#x27;click&#x27; , e =&gt; &#123;</span><br><span class="line">            const &#123;tagName , dataset&#125; = e.target</span><br><span class="line">            if ( tagName === &#x27;A&#x27; ) &#123;</span><br><span class="line">              let arr = goodsList</span><br><span class="line">              if ( dataset.index === &#x27;1&#x27; ) &#123;</span><br><span class="line">                arr = goodsList.filter (item =&gt; item.price &gt; 0 &amp;&amp; item.price &lt;= 100)</span><br><span class="line">              &#125; else if ( dataset.index === &#x27;2&#x27; ) &#123;</span><br><span class="line">                arr = goodsList.filter (item =&gt; item.price &gt;= 100 &amp;&amp; item.price &lt;= 300)</span><br><span class="line">              &#125; else if ( dataset.index === &#x27;3&#x27; ) &#123;</span><br><span class="line">                arr = goodsList.filter (item =&gt; item.price &gt;= 300)</span><br><span class="line">              &#125;</span><br><span class="line">              render (arr);</span><br><span class="line">            &#125;</span><br><span class="line">          &#125;)</span><br><span class="line">        &lt;/script&gt;</span><br><span class="line">    &lt;/body&gt;</span><br><span class="line"></span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
 
 
-            
-        </div>
     </div>
-    <div class="post-tags">
-        
-        
-        
-    </div>
-    <a href="/2024/06/04/javaScript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="go-post">阅读全文</a>
-</div>
-
-<div class="post">
-    <a href="/2024/06/04/first/">
-        <h2 class="post-title">first</h2>
-    </a>
-    <div class="category-and-date">
-        
-        <span class="date">
-            <span class="icon">
-                <i class="fa-solid fa-calendar fa-fw"></i>
-            </span>
-            2024/6/4
-        </span>
-        
-        
-    </div>
-    <div class="description">
-        <div class="content" v-pre>
-            
-            
-            
-        </div>
-    </div>
-    <div class="post-tags">
-        
-        
-        
-    </div>
-    <a href="/2024/06/04/first/" class="go-post">阅读全文</a>
-</div>
-
-<div class="post">
-    <a href="/2024/06/03/hello-world/">
-        <h2 class="post-title">Hello World</h2>
-    </a>
-    <div class="category-and-date">
-        
-        <span class="date">
-            <span class="icon">
-                <i class="fa-solid fa-calendar fa-fw"></i>
-            </span>
-            2024/6/3
-        </span>
-        
-        
-    </div>
-    <div class="description">
-        <div class="content" v-pre>
-            
-            <p>description: |<br>    Normal <em>Italic</em> <strong>Strong</strong></p>
-<p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-            
-        </div>
-    </div>
-    <div class="post-tags">
-        
-        
-        
-    </div>
-    <a href="/2024/06/03/hello-world/" class="go-post">阅读全文</a>
-</div>
-
-
-        <div class="page-current">
     
-    <span class="current">1</span>
     
     
     
     
-</div>
-
-    </div>
     
-    <div id="home-card">
-        <div id="card-style">
-    <div id="card-div">
-        <div class="avatar">
-            <img src="/images/avatar.jpg" alt="avatar" />
-        </div>
-        <div class="name">John Doe</div>
-        <div class="description">
-            <p>Description<br>…</p>
-
-        </div>
-        
-        
-        <div class="friend-links">
-            
-            <div class="friend-link">
-                <a target="_blank" rel="noopener" href="https://argvchs.github.io">Argvchs</a>
-            </div>
-            
-        </div>
-        
-    </div>
-</div>
-
-    </div>
     
 </div>
 
@@ -1156,6 +1013,12 @@
         
     </div>
     <script src="/js/main.js"></script>
+    
+    
+
+
+
+
     
 </body>
 </html>
